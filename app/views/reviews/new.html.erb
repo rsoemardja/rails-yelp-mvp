@@ -1,7 +1,7 @@
-<div class="container pt-4 col-4">
+<div class="container pt-5 col-4">
   <h1>Create review</h1>
   <!-- <form action="/restaurants"> -->
-  <%= simple_form_for @review do |f| %>
+  <%= simple_form_for [@restaurant, @review] do |f| %>
     <%= f.input :content %>
     <%= f.input :rating, collection: 0..5 %>
     <%= f.submit class: 'btn btn-success text-white' %>
